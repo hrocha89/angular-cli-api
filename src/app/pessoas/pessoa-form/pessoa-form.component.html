@@ -1,0 +1,17 @@
+<div class="row justify-content-md-center">
+  <div class="col-8 mt-5">
+    <form novalidate [formGroup]="form">
+      <div class="form-group">
+        <label>Nome</label>
+        <input type="text" class="form-control" placeholder="Nome" formControlName="nome" 
+        [ngClass]="{ 'is-invalid':sub && hasError('nome') }">
+      </div>
+      <div class="form-group">
+        <label>CPF</label>
+        <input type="text" class="form-control" placeholder="CPF" formControlName="cpf"
+        [ngClass]="{ 'is-invalid':sub && hasError('nome') }">
+      </div>
+      <button type="submit" class="btn btn-success" (click)="onSubmit()">Cadastrar</button>
+    </form>
+  </div>
+</div>

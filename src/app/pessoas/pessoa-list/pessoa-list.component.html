@@ -1,0 +1,26 @@
+<div class="row">
+        <a href="/novo" role="button" class="btn btn-success mt-3 mb-3" >Adicionar Pessoa</a>
+        <table class="table">
+            <thead>
+                <tr>
+                <th scope="col">Código</th>
+                <th scope="col">Nome</th>
+                <th scope="col">CPF</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let p of pessoas">
+                <th scope="row"> {{ p.id }} </th>
+                <td>{{ p.nome }} </td>
+                <td> {{ p.cpf }} </td>
+                <td><a href="/edita/{{ p.id }} " role="button" class="btn btn-primary">Alterar</a></td>
+                <td><button class="btn btn-danger" (click)="onDelete(p.id)">Excluir</button></td>
+                </tr>
+            </tbody>
+        </table>
+</div>
+    
+
+
